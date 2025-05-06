@@ -1,0 +1,304 @@
+*{margin: 0;padding: 0}
+html{scroll-behavior: smooth;}
+body{background-color:#F3F3F3; color: #1a1a1a}
+
+/*barre de navigation*/
+a{
+	color: black;
+	text-decoration: none 
+}
+.nav-bar li{
+	list-style-type: none;
+	font-size: 18px;
+	display: inline-block;
+	margin:0 1.5em;
+}
+header a svg {fill: black;}
+header{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 1% 0;
+	background-color: rgba(255,255,255,0.95);
+	position:fixed;
+	top: 0;
+	z-index: 1;
+	width:100%;
+	border-bottom: 2px solid #E0E0E0;
+}
+/*hero-page*/
+.main-tab{
+	height: 100vh;
+	width:100%;	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 2px solid #E0E0E0;
+}
+.main-tab h2{ 
+	font-size: 43px;
+	padding: 7% 1% 2%;
+}
+.main-tab p{
+	font-size: 19px;
+	width: 800px;
+	padding-bottom: 30px
+}
+.button{
+	border: 1px solid whitesmoke;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: darkslategray; 
+	color: white; 
+	font-size: 17px;
+}
+.main-tab .button{margin-right: 10px;}
+.button:hover{transform: scale(1.1);transition: transform 0.4s ease	}
+.main-icons{
+	height: 22px; 
+	width: 22px; 
+	vertical-align: middle;
+}
+
+#pfp{ 
+	width: 500px;
+	border-radius: 100px; 
+	float: right; 
+	margin-left: 10px;
+}
+
+/*about section*/
+.about{
+	display: flex;
+	height: 100vh;
+	width:100%;	
+	align-items: center;
+	justify-content: center;
+	border-bottom: 2px solid #E0E0E0;
+}
+.about img{ 
+	height: 500px;
+	width: 500px; 
+	border-radius: 100px; 
+	float: left; 
+	margin-right: 80px
+}
+.about h2{ 
+	font-size: 43px; 
+	padding: 7% 1% 2%
+}
+.about p{ 
+	font-size: 19px;
+	width: 800px;
+	margin-bottom: 20px
+}
+.about .contenue h3{font-size: 24px}
+.about .contenue ul li {
+	list-style-type: none;
+	font-size:16px;
+	margin: 10px; 
+	fill: darkslategray
+}
+.about .contenue svg{
+	margin-right: 10px; 
+	vertical-align:middle; 
+}
+
+/*cursus scolaire section*/
+.education{
+	height: 100vh;
+	border-bottom: 2px solid #E0E0E0;
+}
+.education h2{ 
+	font-size: 43px; 
+	text-align: center; 
+	padding: 2em 0
+}
+.cards{
+	display: flex;
+	height: 50vh;
+	width: 100%;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.card{
+	width: 30em;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 25px ;
+	margin: 14px;
+	padding: 25px;
+	text-align: center; 
+	background-color: #f0eded;
+}
+
+.card:hover{transform: scale(1.05);transition: transform 0.4s ease}
+.card h3{
+	font-size: 27px; 
+	padding: 1em 0; 
+}
+.card p{ 
+	font-size: 22px; 
+	margin-top: 10px
+}
+
+/*COMPETENCES section*/
+
+.competence{
+	height: 70vh;
+	border-bottom: 2px solid #E0E0E0;
+}
+.competence h2{
+	font-size: 43px;
+	text-align: center; 
+	padding: 2em 0
+}
+.competence .skills {
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+}
+.competence .skills i{
+	font-size: 5em; 
+	margin: 30px; 
+	color: darkslategray
+}
+.competence .skills i:hover{
+	color: #497a7a;
+	transform: scale(1.2);
+	transition: transform 0.4s ease
+}
+
+/*EXPERIENCE section*/
+.experience{
+	height: 100vh;
+	border-bottom: 2px solid #E0E0E0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.experience h2{
+	font-size: 43px; 
+	padding: 2em 0 
+}
+.experience .EXPS{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+.experience .Exp{
+	width: 350px;
+	height: 400px;
+	text-align: center;
+	border: 1px solid lightgray;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+.experience .Exp img{
+	width: 270px;
+	height: 200px;
+	margin: 10px;
+	border-radius: 10px
+}
+.experience .Exp p{
+	margin-top: 5px; 
+	padding: 0 10px 5px
+}
+.experience .Exp:hover{
+	transform: scale(1.05);
+	box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.1); 
+	transition: transform 0.2s ease
+}
+
+/*LOISIRS section*/
+.loisirs{
+	height: 50vh;
+	border-bottom: 2px solid #E0E0E0;
+}
+.loisirs h2{
+	font-size: 43px; 
+	text-align: center; 
+	padding: 2em 0
+}
+.loisirs .tags{
+	display: flex; 
+	text-align: center; 
+	justify-content: center;
+}
+.loisirs .tags span{
+	font-size: 20px;
+	color: white;
+	background-color: darkslategray;
+	font-family: Inter, sans-serif;
+	font-weight: 600;
+	border: 1px gray solid;
+	border-radius: 20px; 
+	margin: 30px;
+	padding: 0.5em 1.5em
+}
+.loisirs .tags span:hover{
+	background-color: #497a7a;
+	transform: scale(1.2);
+	transition: transform 0.4s ease
+}
+
+/*contact section*/
+.contact{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.contact .txt{text-align: center}
+.contact h2{
+	font-size: 43px; 
+	padding: 2em 0 0.5em 
+}
+.contact p{
+	font-size: 20px; 
+	padding-bottom: 2em
+}
+.contact .zone{
+	min-height: 400px;
+	max-width: 500px;
+	display: block;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+.contact .zone .groupe{margin: 20px}
+.contact .zone .groupe label{font-size: 18px}
+.contact .zone .groupe input, .contact .zone .groupe textarea{padding: 7px;border-radius: 10px}
+.contact .zone .groupe button{
+	font-size: 16px; 
+	margin-right: 10px; 
+	padding: 4px;
+}
+
+/*footer section*/
+footer{
+	height: 20vh;
+	background-color: #363636;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+footer .foot_icons a i{
+	font-size: 26px; 
+	color: #BEBEBE; 
+	padding: 10px; 
+}
+footer .foot_icons a i:hover{color: white;}
+
+footer .foot_links ul li{display: inline-block; padding: 15px;}
+footer .foot_links ul li a{color: #BEBEBE; font-size: 18px}
+footer .foot_links ul li a:hover{color: white} 
+
+footer p{
+	color: #BEBEBE;
+	padding-top: 15px; 
+  	border-top: 1px solid gray;
+   	width: 90%; 
+	text-align:center;
+}

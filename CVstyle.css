@@ -1,101 +1,96 @@
-*{margin: 0;padding: 0}
+*{margin: 0;padding: 0;  box-sizing: border-box;}
 html{scroll-behavior: smooth;}
 body{background-color:#F3F3F3; color: #1a1a1a}
 
 /*barre de navigation*/
 a{
-	color: black;
+	color: #1a1a1a;
 	text-decoration: none 
 }
+
 .nav-bar li{
 	list-style-type: none;
 	font-size: 18px;
 	display: inline-block;
 	margin:0 1.5em;
 }
-header a svg {fill: black;}
+.nav-bar li:hover{border-bottom: 1px solid black;}
+header a svg {fill: #1a1a1a;} /*couleur de logo*/
 header{
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	flex-wrap: wrap;
 	padding: 1% 0;
 	background-color: rgba(255,255,255,0.95);
-	position:fixed;
+	position:sticky;
 	top: 0;
 	z-index: 1;
 	width:100%;
 	border-bottom: 2px solid #E0E0E0;
 }
-/*hero-page*/
-.main-tab{
+/*main-page*/
+
+
+main, .about{
 	height: 100vh;
-	width:100%;	
+	width: 100%;
+	padding: 10px 80px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	gap: 80px;
 	border-bottom: 2px solid #E0E0E0;
 }
-.main-tab h2{ 
-	font-size: 43px;
-	padding: 7% 1% 2%;
+.main-text{
+	min-width: 400px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
-.main-tab p{
-	font-size: 19px;
-	width: 800px;
-	padding-bottom: 30px
+.main-text h2{
+	font-size: 7vmin;
 }
-.button{
-	border: 1px solid whitesmoke;
-	border-radius: 10px;
+.main-text p{font-size: 1.3vmax;}
+.main-text p:last-of-type{padding-bottom: 15px }
+.pfp{
+	width: 70vmax; 
+	height: 30vmax;
+	border-radius: 100px;
+}
+.buttons a,#btn-cnt{
+	font-size: 2vmin;
+	background-color: darkslategray;
+	color: whitesmoke;
+	border: 1px solid floralwhite;
+	border-radius: 15px;
 	padding: 10px;
-	background-color: darkslategray; 
-	color: white; 
-	font-size: 17px;
 }
-.main-tab .button{margin-right: 10px;}
-.button:hover{transform: scale(1.1);transition: transform 0.4s ease	}
-.main-icons{
-	height: 22px; 
-	width: 22px; 
+main .buttons img{
+	height: 22px;
+	width: 22px;
 	vertical-align: middle;
 }
-
-#pfp{ 
-	width: 500px;
-	border-radius: 100px; 
-	float: right; 
-	margin-left: 10px;
+#btn-cnt:hover,.buttons a:hover{
+	background-color: #446161;
+	transform: scale(1.1);
+	transition: transform 0.3s ease
 }
 
 /*about section*/
-.about{
-	display: flex;
-	height: 100vh;
-	width:100%;	
-	align-items: center;
-	justify-content: center;
-	border-bottom: 2px solid #E0E0E0;
-}
-.about img{ 
-	height: 500px;
-	width: 500px; 
-	border-radius: 100px; 
-	float: left; 
-	margin-right: 80px
-}
+
 .about h2{ 
-	font-size: 43px; 
-	padding: 7% 1% 2%
+	font-size: 7vmin;	
 }
 .about p{ 
-	font-size: 19px;
-	width: 800px;
-	margin-bottom: 20px
+	min-width: 400px;
+	font-size: 2.5vmin;
+	margin: 20px 0;
 }
-.about .contenue h3{font-size: 24px}
+.about .contenue h3{font-size: 3.5vmin}
 .about .contenue ul li {
 	list-style-type: none;
-	font-size:16px;
+	font-size:2.2vmin;
 	margin: 10px; 
 	fill: darkslategray
 }
@@ -106,20 +101,25 @@ header{
 
 /*cursus scolaire section*/
 .education{
-	height: 100vh;
+	min-height: 100vh;
 	border-bottom: 2px solid #E0E0E0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .education h2{ 
-	font-size: 43px; 
+	font-size: 7vmin;	
 	text-align: center; 
-	padding: 2em 0
+	padding: 1em 0
 }
 .cards{
 	display: flex;
-	height: 50vh;
+	min-height: 50vh;
 	width: 100%;
 	justify-content: center;
+	align-items: center;
 	flex-wrap: wrap;
+	gap: 20px;
 }
 .card{
 	width: 30em;
@@ -134,7 +134,7 @@ header{
 .card:hover{transform: scale(1.05);transition: transform 0.4s ease}
 .card h3{
 	font-size: 27px; 
-	padding: 1em 0; 
+	padding-bottom: 1em; 
 }
 .card p{ 
 	font-size: 22px; 
@@ -144,22 +144,25 @@ header{
 /*COMPETENCES section*/
 
 .competence{
-	height: 70vh;
+	min-height: 70vh;
 	border-bottom: 2px solid #E0E0E0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 4rem;
 }
 .competence h2{
-	font-size: 43px;
+	font-size: 7vmin;	
 	text-align: center; 
-	padding: 2em 0
 }
 .competence .skills {
 	display: flex; 
-	align-items: center; 
 	justify-content: center;
+	gap: 70px;
+	flex-wrap: wrap;
 }
 .competence .skills i{
-	font-size: 5em; 
-	margin: 30px; 
+	font-size: 10vmin; 
 	color: darkslategray
 }
 .competence .skills i:hover{
@@ -170,18 +173,18 @@ header{
 
 /*EXPERIENCE section*/
 .experience{
-	height: 100vh;
+	min-height: 100vh;
 	border-bottom: 2px solid #E0E0E0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	gap: 4rem;
 }
 .experience h2{
-	font-size: 43px; 
-	padding: 2em 0 
+	font-size: 7vmin;	
 }
 .experience .EXPS{
-	width: 100%;
 	display: flex;
 	justify-content: center;
 	gap: 20px;
@@ -189,7 +192,7 @@ header{
 }
 .experience .Exp{
 	width: 350px;
-	height: 400px;
+	min-height: 400px;
 	text-align: center;
 	border: 1px solid lightgray;
 	border-radius: 15px;
@@ -213,21 +216,25 @@ header{
 
 /*LOISIRS section*/
 .loisirs{
-	height: 50vh;
+	min-height: 50vh;
 	border-bottom: 2px solid #E0E0E0;
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+	gap: 4rem;
 }
 .loisirs h2{
-	font-size: 43px; 
+	font-size: 7vmin;	
 	text-align: center; 
-	padding: 2em 0
 }
 .loisirs .tags{
 	display: flex; 
 	text-align: center; 
 	justify-content: center;
+	flex-wrap: wrap;
 }
 .loisirs .tags span{
-	font-size: 20px;
+	font-size: 3.5vmin;
 	color: white;
 	background-color: darkslategray;
 	font-family: Inter, sans-serif;
@@ -252,7 +259,7 @@ header{
 }
 .contact .txt{text-align: center}
 .contact h2{
-	font-size: 43px; 
+	font-size: 7vmin;	
 	padding: 2em 0 0.5em 
 }
 .contact p{
@@ -299,6 +306,6 @@ footer p{
 	color: #BEBEBE;
 	padding-top: 15px; 
   	border-top: 1px solid gray;
-   	width: 90%; 
+   	width: 90%;
 	text-align:center;
 }

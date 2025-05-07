@@ -1,10 +1,35 @@
 *{margin: 0;padding: 0;  box-sizing: border-box;}
 html{scroll-behavior: smooth;}
-body{background-color:#F3F3F3; color: #1a1a1a}
+body{background-color:#F3F3F3; color:#1a1a1a ;}
+:root{
+	--bg-color:#F3F3F3;
+	--txt-color: #1a1a1a;
+	--header-color: white;
+	--third-color:darkslategray;
+	--skills-icons:darkslategray;
+	--button-hover:#446161;
+	--contact-color:lightgray;
+	--footer-color:#363636;
+}
+.darktheme{
+	--bg-color:#021526;
+	--txt-color: #D4DDFF;
+	--header-color: #0A192F;
+	--third-color:#486581;
+	--skills-icons:white;
+	--button-hover:#1F4287;
+	--contact-color:#639CD9;
+	--footer-color:#0A192F;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+}
 
 /*barre de navigation*/
 a{
-	color: #1a1a1a;
+	color: var(--txt-color);
 	text-decoration: none 
 }
 
@@ -14,21 +39,26 @@ a{
 	display: inline-block;
 	margin:0 1.5em;
 }
-.nav-bar li:hover{border-bottom: 1px solid black;}
-header a svg {fill: #1a1a1a;} /*couleur de logo*/
+.nav-bar li:hover{border-bottom: 1px solid var(--txt-color);}
+header a svg {fill: var(--txt-color);} /*couleur de logo*/
 header{
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	padding: 1% 0;
-	background-color: rgba(255,255,255,0.95);
+	background-color: var(--header-color);
 	position:sticky;
 	top: 0;
 	z-index: 1;
 	width:100%;
-	border-bottom: 2px solid #E0E0E0;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	
 }
+#switch_mode{margin-left: 15px; vertical-align: middle;}
+#switch_mode img:first-of-type{display: none}
+.darktheme #switch_mode img:last-of-type{display: none}
+.darktheme #switch_mode img:first-of-type{display: inline-block;}
 /*main-page*/
 
 
@@ -60,7 +90,7 @@ main, .about{
 }
 .buttons a,#btn-cnt{
 	font-size: 2vmin;
-	background-color: darkslategray;
+	background-color: var(--third-color);
 	color: whitesmoke;
 	border: 1px solid floralwhite;
 	border-radius: 15px;
@@ -72,7 +102,7 @@ main .buttons img{
 	vertical-align: middle;
 }
 #btn-cnt:hover,.buttons a:hover{
-	background-color: #446161;
+	background-color: var(--button-hover);
 	transform: scale(1.1);
 	transition: transform 0.3s ease
 }
@@ -123,12 +153,13 @@ main .buttons img{
 }
 .card{
 	width: 30em;
+	color: whitesmoke;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	border-radius: 25px ;
 	margin: 14px;
 	padding: 25px;
 	text-align: center; 
-	background-color: #f0eded;
+	background-color: var(--third-color);
 }
 
 .card:hover{transform: scale(1.05);transition: transform 0.4s ease}
@@ -163,10 +194,10 @@ main .buttons img{
 }
 .competence .skills i{
 	font-size: 10vmin; 
-	color: darkslategray
+	color: var(--skills-icons);
 }
 .competence .skills i:hover{
-	color: #497a7a;
+	color: var(--button-hover);
 	transform: scale(1.2);
 	transition: transform 0.4s ease
 }
@@ -182,7 +213,7 @@ main .buttons img{
 	gap: 4rem;
 }
 .experience h2{
-	font-size: 7vmin;	
+	font-size: 7vmin;
 }
 .experience .EXPS{
 	display: flex;
@@ -193,7 +224,9 @@ main .buttons img{
 .experience .Exp{
 	width: 350px;
 	min-height: 400px;
+	color: white;
 	text-align: center;
+	background-color:  var(--third-color);
 	border: 1px solid lightgray;
 	border-radius: 15px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
@@ -206,8 +239,10 @@ main .buttons img{
 }
 .experience .Exp p{
 	margin-top: 5px; 
-	padding: 0 10px 5px
+	padding: 0 10px 5px;
+	color: whitesmoke;
 }
+.experience .Exp h4,.experience .Exp h5{color: whitesmoke;}
 .experience .Exp:hover{
 	transform: scale(1.05);
 	box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.1); 
@@ -235,8 +270,8 @@ main .buttons img{
 }
 .loisirs .tags span{
 	font-size: 3.5vmin;
-	color: white;
-	background-color: darkslategray;
+	background-color: var(--third-color);
+	color: whitesmoke;
 	font-family: Inter, sans-serif;
 	font-weight: 600;
 	border: 1px gray solid;
@@ -245,7 +280,7 @@ main .buttons img{
 	padding: 0.5em 1.5em
 }
 .loisirs .tags span:hover{
-	background-color: #497a7a;
+	background-color: var(--button-hover);
 	transform: scale(1.2);
 	transition: transform 0.4s ease
 }
@@ -269,6 +304,8 @@ main .buttons img{
 .contact .zone{
 	min-height: 400px;
 	max-width: 500px;
+	color: #1a1a1a;
+	background-color:var(--contact-color);
 	display: block;
 	border: 1px solid black;
 	border-radius: 10px;
@@ -285,7 +322,7 @@ main .buttons img{
 /*footer section*/
 footer{
 	height: 20vh;
-	background-color: #363636;
+	background-color: var(--footer-color);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
